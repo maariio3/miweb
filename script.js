@@ -5,7 +5,7 @@ document.getElementById('btnProcesar').addEventListener('click', function() {
 
     // 2. Comprobar que no esté vacío
     if (texto === "") {
-        document.getElementById('resultado').innerText = "Escribe algo primero.";
+        document.getElementById('resultado').innerText = "Escribe algo primero";
         document.getElementById('resultado').style.color = "red";
     } else {
         // 3. Mostrar el mensaje exacto que pediste
