@@ -1,20 +1,17 @@
-// Detectamos el click en el botón
 document.getElementById('btnProcesar').addEventListener('click', function() {
     
     // 1. Recoger el valor del campo de texto
     var texto = document.getElementById('campoTexto').value;
 
-    // 2. Procesar (Ejemplo: pasarlo a mayúsculas y validarlo)
-    var respuesta = "";
-    
+    // 2. Comprobar que no esté vacío
     if (texto === "") {
-        respuesta = "⚠️ El campo está vacío, escribe algo.";
+        document.getElementById('resultado').innerText = "Escribe algo primero.";
         document.getElementById('resultado').style.color = "red";
     } else {
-        respuesta = "✅ Procesado por JS: " + texto.toUpperCase();
-        document.getElementById('resultado').style.color = "green";
+        // 3. Mostrar el mensaje exacto que pediste
+        document.getElementById('resultado').innerText = "hola: " + texto;
+        
+        // Pongo el color en negro o azul para que se lea bien
+        document.getElementById('resultado').style.color = "blue";
     }
-
-    // 3. Devolver la respuesta al HTML
-    document.getElementById('resultado').innerText = respuesta;
 });
